@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+    <population Name="Village Apothecary 0" Load="Merge">
+    <group Name="Items" Style="pickeach">
+        <object Chance="100" Number="1" Blueprint="Nightmare Treat"></object>    
+      </group>
+    </population>
+    <population Name="Village Apothecary 1" Load="Merge">
+    <group Name="Items" Style="pickeach">
+        <object Chance="100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+      </group>
+    </population>
+    <population Name="Village Apothecary 2" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,50,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Village Apothecary 3" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Village Apothecary 4" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,25" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Village Apothecary 5" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Village Apothecary 6" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,75" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Village Apothecary 7" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Village Apothecary 8" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,100,25" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="ApothecaryInventory" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,50,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Agolzvuv">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,50,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Agolfly">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Agolmaggot">
+        <group Name="Items" Style="pickeach">
+          <object Chance="25" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Girshworm">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Girshling">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="GolgothaSlog">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Glow Wight">
+        <group Name="Items" Style="pickeach">
+          <object Chance="50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Glow-Wight Cultist of Agolgut" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Glow-Wight Cultist of Bethsaida" Load="Merge">
+        <group Name="Items" Style="pickeach">
+          <object Chance="50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Glow-Wight Hero of Bethsaida 1">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Glow-Wight Hero of Agolgut 1">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Mamon">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Wild Watervine Merchant">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Goatfolk Qlippoth">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Novice of the Sightless Way">
+        <group Name="Items" Style="pickeach">
+          <object Chance="50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Disciple of the Sightless Way">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="Dervish of the Sightless Way">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,50" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="High Dervish of the Sightless Way">
+        <group Name="Items" Style="pickeach">
+          <object Chance="100,100" Number="1" Blueprint="Nightmare Treat"></object>    
+        </group>
+      </population>
+      <population Name="TreatOutcome">
+        <group Name="TreatOutcome" Style="pickone">
+            <object Blueprint="Intelligence" Weight="16" Hint="Stat"/>
+            <object Blueprint="Willpower" Weight="16" Hint="Stat"/>
+            <object Blueprint="Ego" Weight="16" Hint="Stat"/>
+            <object Blueprint="GlotrotOnset" Weight="16" Hint="Disease"/>
+            <object Blueprint="IronshankOnset" Weight="16" Hint="Disease"/>
+            <object Blueprint="MonochromeOnset" Weight="16" Hint="Disease"/>
+        </group>
+      </population>
+</populations>
