@@ -19,15 +19,10 @@ namespace XRL.World.Parts
 
         public override bool WantEvent(int ID, int cascade)
         {
-            if (
-                !base.WantEvent(ID, cascade)
-                && ID != GetInventoryActionsAlwaysEvent.ID
-                && ID != GetShortDescriptionEvent.ID
-            )
-            {
-                return ID == InventoryActionEvent.ID;
-            }
-            return true;
+            return base.WantEvent(ID, cascade)
+                || ID == GetInventoryActionsAlwaysEvent.ID
+                || ID == GetShortDescriptionEvent.ID
+                || ID == InventoryActionEvent.ID;
         }
 
         public override bool HandleEvent(GetInventoryActionsAlwaysEvent E)
@@ -57,6 +52,7 @@ namespace XRL.World.Parts
             return base.HandleEvent(E);
         }
 
+        //the meat of the the variable effect is here, this gets a value for the bonus, finds who ate the treat, and rolls from the population tables. then it shuffles random mutations
         public override bool FireEvent(Event E)
         {
             if (E.ID == "OnEat")
@@ -65,16 +61,14 @@ namespace XRL.World.Parts
                 var eater = E.GetGameObjectParameter("Eater");
                 var result = PopulationManager.RollOneFrom("TreatOutcome");
                 eater.PermuteRandomMutationBuys();
-                if (eater.HasEffect("GlotrotOnset"))
-                {
-                    Popup.ShowFail(ParentObject.Does("seem") + "to taste like anything.");
-                    E.eater.UseEnergy(1000, "Item Failure");
-                    E.RequestInterfaceExit();
-                    return false;
-                }
                 if (result.Hint == "Stat")
                 {
                     eater.GetStat(result.Blueprint).BaseValue += Bonus;
+                    return true;
+                }
+                if (result.Hint == "Onset")
+                {
+                    eater.ApplyEffect(CreateEffectByName(result.Blueprint));
                     return true;
                 }
                 if (result.Hint == "Disease")
