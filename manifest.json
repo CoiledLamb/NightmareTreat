@@ -1,0 +1,10 @@
+{
+	"id": "NightmareTreat",
+	"loadorder": 10,
+	"title": "{{K-K-m-K-K-K-m-m-K-K sequence|nightmare treat}}",
+	"description": "Adds a single food item, that mixes danger with potential benefit.",
+	"tags": "Food",
+	"version": "1.0",
+	"author": "Lamb",
+	"previewImage": "nightmaretreatpreview.png"
+}
