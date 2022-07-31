@@ -1,4 +1,5 @@
 using System;
+using XRL.UI
 
 namespace XRL.World.Parts
 {
@@ -52,7 +53,7 @@ namespace XRL.World.Parts
             return base.HandleEvent(E);
         }
 
-        //the meat of the the variable effect is here, this gets a value for the bonus, finds who ate the treat, and rolls from the population tables. then it shuffles random mutations
+//the meat of the the variable effect is here, this gets a value for the bonus, finds who ate the treat, and rolls from the population tables. then it shuffles random mutations
         public override bool FireEvent(Event E)
         {
             if (E.ID == "OnEat")
@@ -64,11 +65,26 @@ namespace XRL.World.Parts
                 if (result.Hint == "Stat")
                 {
                     eater.GetStat(result.Blueprint).BaseValue += Bonus;
+                    Popup.Show($"your {result.Blueprint} is increased by {Bonus}!")
                     return true;
                 }
                 if (result.Hint == "Onset")
                 {
                     eater.ApplyEffect(CreateEffectByName(result.Blueprint));
+                    switch (result.Blueprint)
+                    {
+                        case "GlotrotOnset":
+                        Popup.Show("As the treat melts on your tongue, it leaves a painful throbbing in its wake.")
+                        break;
+
+                        case "IronshankOnset":
+                        Popup.Show("As the treat passes your throat, your legs start to tremble, and then tense up entirely.")
+                        break;
+
+                        case "MonochromeOnset":
+                        Popup.Show("You bite harshly into the treat, and terror clouds the edges of your sight.")
+                        break;
+                    }
                     return true;
                 }
                 if (result.Hint == "Disease")
@@ -76,6 +92,9 @@ namespace XRL.World.Parts
                     eater.ApplyEffect(CreateEffectByName(result.Blueprint));
                     return true;
                 }
+                else
+                Popup.Show("Nothing happened. Despite this, you feel like you shouldn't have any more treats for a while.")
+                E.RequestInterfaceExit();
             }
             return base.FireEvent(E);
         }
