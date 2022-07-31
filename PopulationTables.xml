@@ -142,12 +142,15 @@
       </population>
       <population Name="TreatOutcome">
         <group Name="TreatOutcome" Style="pickone">
-            <object Blueprint="Intelligence" Weight="16" Hint="Stat"/>
-            <object Blueprint="Willpower" Weight="16" Hint="Stat"/>
-            <object Blueprint="Ego" Weight="16" Hint="Stat"/>
-            <object Blueprint="GlotrotOnset" Weight="16" Hint="Disease"/>
-            <object Blueprint="IronshankOnset" Weight="16" Hint="Disease"/>
-            <object Blueprint="MonochromeOnset" Weight="16" Hint="Disease"/>
+            <object Blueprint="Intelligence" Weight="10" Hint="Stat"/>
+            <object Blueprint="Willpower" Weight="10" Hint="Stat"/>
+            <object Blueprint="Ego" Weight="10" Hint="Stat"/>
+            <object Blueprint="GlotrotOnset" Weight="20" Hint="Onset"/>
+            <object Blueprint="IronshankOnset" Weight="20" Hint="Onset"/>
+            <object Blueprint="MonochromeOnset" Weight="20" Hint="Onset"/>
+            <object Blueprint="Glotrot" Weight="10" Hint="Disease"/>
+            <object Blueprint="Ironshank" Weight="10" Hint="Disease"/>
+            <object Blueprint="Monochrome" Weight="10" Hint="Disease"/>
         </group>
       </population>
 </populations>
