@@ -35,7 +35,7 @@ namespace XRL.World.Parts
                 null,
                 'e',
                 FireOnActor: false,
-                Default: 100,
+                Default: 25,
                 Priority: 0,
                 Override: true
             );
