@@ -1,5 +1,5 @@
 using System;
-using XRL.UI
+using XRL.UI;
 
 namespace XRL.World.Parts
 {
@@ -65,7 +65,7 @@ namespace XRL.World.Parts
                 if (result.Hint == "Stat")
                 {
                     eater.GetStat(result.Blueprint).BaseValue += Bonus;
-                    Popup.Show($"your {result.Blueprint} is increased by {Bonus}!")
+                    Popup.Show($"your {result.Blueprint} is increased by {Bonus}!");
                     return true;
                 }
                 if (result.Hint == "Onset")
@@ -74,15 +74,15 @@ namespace XRL.World.Parts
                     switch (result.Blueprint)
                     {
                         case "GlotrotOnset":
-                        Popup.Show("As the treat melts on your tongue, it leaves a painful throbbing in its wake.")
+                        Popup.Show("As the treat melts on your tongue, it leaves a painful throbbing in its wake.");
                         break;
 
                         case "IronshankOnset":
-                        Popup.Show("As the treat passes your throat, your legs start to tremble, and then tense up entirely.")
+                        Popup.Show("As the treat passes your throat, your legs start to tremble, and then tense up entirely.");
                         break;
 
                         case "MonochromeOnset":
-                        Popup.Show("You bite harshly into the treat, and terror clouds the edges of your sight.")
+                        Popup.Show("You bite harshly into the treat, and terror clouds the edges of your sight.");
                         break;
                     }
                     return true;
@@ -92,9 +92,6 @@ namespace XRL.World.Parts
                     eater.ApplyEffect(CreateEffectByName(result.Blueprint));
                     return true;
                 }
-                else
-                Popup.Show("Nothing happened. Despite this, you feel like you shouldn't have any more treats for a while.")
-                E.RequestInterfaceExit();
             }
             return base.FireEvent(E);
         }
