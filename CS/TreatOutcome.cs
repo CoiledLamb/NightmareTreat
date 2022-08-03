@@ -6,10 +6,9 @@ namespace XRL.World.Parts
     [Serializable]
     public class TreatOutcome : IPart
     {
-        public static Effect CreateEffectByName(string name)
+        public Effect CreateEffectByName(string name)
         {
-            return Activator.CreateInstance(ModManager.ResolveType("XRL.World.Effects." + name))
-                as Effect;
+            return XRL.ModManager.CreateInstance<Effect>("XRL.World.Effects." + name);
         }
 
         public override void Register(GameObject Object)
@@ -70,7 +69,6 @@ namespace XRL.World.Parts
                 }
                 if (result.Hint == "Onset")
                 {
-                    AddPlayerMessage($"WTF WHY?! {result.Blueprint} {result.Hint}");
                     eater.ApplyEffect(CreateEffectByName(result.Blueprint));
                     switch (result.Blueprint)
                     {
@@ -96,7 +94,6 @@ namespace XRL.World.Parts
                 }
                 if (result.Hint == "Disease")
                 {
-                    AddPlayerMessage(result.Blueprint);
                     eater.ApplyEffect(CreateEffectByName(result.Blueprint));
                     return true;
                 }
